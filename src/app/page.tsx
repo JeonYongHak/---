@@ -11,11 +11,7 @@ const navigation = [
   { name: '문의하기', href: '#' },
 ];
 
-type Props = {
-  subDomain: string;
-};
-
-export default function Home({ subDomain }: Props) {
+export default function Home() {
   return (
     <main className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-7xl">
@@ -23,11 +19,6 @@ export default function Home({ subDomain }: Props) {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -121,9 +112,7 @@ export default function Home({ subDomain }: Props) {
                 height={684}
                 transform="translate(24 24)"
                 clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
-              >
-                <img src="https://tailwindui.com/img/component-images/mobile-app-screenshot.png" alt="" />
-              </foreignObject>
+              ></foreignObject>
             </svg>
           </div>
         </div>
