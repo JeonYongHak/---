@@ -1,7 +1,7 @@
-import privacy from '@/markdown/privacy.md';
+import { PRIVACY } from '@/markdown/privacy';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 export default function PrivacyPage() {
-  return <Markdown remarkPlugins={[remarkGfm]}>{`${privacy}`}</Markdown>;
+  return <Markdown remarkPlugins={[remarkGfm]}>{`${PRIVACY}`}</Markdown>;
 }
