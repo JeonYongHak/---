@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import ReactQueryProviders from '@/components/providers/ReactQueryProviders';
 
 const myFont = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={myFont.className}>{children}</body>
+      <body className={myFont.className}>
+        <ReactQueryProviders>{children}</ReactQueryProviders>
+      </body>
     </html>
   );
 }
