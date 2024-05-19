@@ -17,6 +17,9 @@ const config: Config = {
         xl: '1280px',
         '2xl': '1280px',
       },
+      borderRadius: {
+        '2.5xl': '1.25rem',
+      },
     },
     container: {
       center: true,

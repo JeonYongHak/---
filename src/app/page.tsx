@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 const includedFeatures = [
   'Private forum access',
   'Member resources',
@@ -13,180 +17,117 @@ const navigation = [
 
 export default function Home() {
   return (
-    <main className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50 mx-auto max-w-7xl">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-            </a>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            >
-              <span className="sr-only">Open main menu</span>
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </nav>
-      </header>
-      <div className="relative isolate pt-14">
-        <svg
-          className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-              width={200}
-              height={200}
-              x="50%"
-              y={-1}
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect width="100%" height="100%" strokeWidth={0} fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
-        </svg>
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <div className="flex">
-              <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                <span className="font-semibold text-indigo-600">이것은 데모입니다.</span>
-                <span className="h-4 w-px bg-gray-900/10" aria-hidden="true" />
-                <a href="#" className="flex items-center gap-x-1">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  가짜 버트
-                </a>
-              </div>
-            </div>
-            <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              오피스 혁신 플랫폼
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">관리 소요는 낮추고, 입주 경험은 높이고</p>
-            <div className="mt-10 flex items-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-            <svg viewBox="0 0 366 729" role="img" className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
-              <title>App screenshot</title>
-              <defs>
-                <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-                  <rect width={316} height={684} rx={36} />
-                </clipPath>
-              </defs>
-              <path
-                fill="#4B5563"
-                d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
-              />
-              <path
-                fill="#343E4E"
-                d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
-              />
-              <foreignObject
-                width={316}
-                height={684}
-                transform="translate(24 24)"
-                clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
-              ></foreignObject>
-            </svg>
-          </div>
+    <main className="mx-auto w-full bg-white px-6 lg:w-[1500px]">
+      <div className="h-[68px]"></div>
+      <section className="flex h-[640px] w-full flex-col justify-between rounded-[20px] bg-black/80 px-[60px] py-20">
+        <div>
+          <h2 className="text-[58px] font-bold leading-normal text-white">
+            오피스 빌딩 관리의 모든 것 <br />
+            오피스너에서 쉽고 간편하게
+          </h2>
+          <h4 className="mt-6 text-2xl font-semibold text-white">관리 소요는 낮추고, 입주 경험은 높이세요</h4>
         </div>
-      </div>
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Everything you need to deploy your app
-            </p>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-              pulvinar et feugiat blandit at. In mi viverra elit nunc.
-            </p>
-          </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none"></div>
-        </div>
-      </div>
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas
-              in. Explicabo id ut laborum.
+        <button className="w-fit rounded-xl bg-blue-600 p-3.5">
+          <span className="text-[20px] font-semibold text-white">지금 시작하기</span>
+        </button>
+      </section>
+      <section className="mt-9 flex gap-9">
+        <article className="flex flex-1 items-center rounded-2.5xl bg-gray-800 p-10">
+          <div className="flex flex-col gap-3">
+            <h3 className="text-2xl font-bold text-white">프리미엄 건물 가치를 위한 선택</h3>
+            <p className="text-lg text-white">
+              국내 최대 규모, 최고의 건물에서
+              <br />
+              오피스너를 선택했습니다.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-            <div className="p-8 sm:p-10 lg:flex-auto">
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900">Lifetime membership</h3>
-              <p className="mt-6 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis
-                repellendus etur quidem assumenda.
+        </article>
+        <article className="flex flex-1 items-center rounded-2.5xl bg-blue-100 p-10">
+          <div className="flex flex-col gap-3">
+            <h3 className="text-2xl font-bold text-blue-500">
+              지금 이 순간에도,
+              <br />
+              스마트한 입주경험을 누리고 있습니다
+            </h3>
+            <p className="text-lg text-blue-500">
+              국내 최대 규모, 최고의 건물에서
+              <br />
+              오피스너를 선택했습니다.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section className="mt-[38px] flex h-[804px] items-center rounded-2.5xl bg-gray-50 px-[100px]">
+        <div>
+          <h3 className="text-[52px] font-bold leading-normal">
+            업계 선두 고객분들과
+            <br /> <span className="text-blue-500">차세대 스마트 빌딩의 혁신</span>
+            을
+            <br />
+            만들어 나가고 있습니다.
+          </h3>
+          <div className="mt-11 flex flex-col gap-4">
+            <div className="flex flex-col gap-1">
+              <p className="text-sm font-semibold text-gray-500">000.00.00 도입완료</p>
+              <p className="flex items-end gap-2">
+                <span className="text-xl font-bold">오산 테라타워 CMC</span>
+                <span className="text-base font-medium text-gray-800">국내 최대 규모 지식산업센터</span>
               </p>
-              <div className="mt-10 flex items-center gap-x-4">
-                <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included</h4>
-                <div className="h-px flex-auto bg-gray-100" />
-              </div>
-              <ul
-                role="list"
-                className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
-              >
-                {includedFeatures.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
-                    {/* <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" /> */}
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </div>
-            <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-              <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                <div className="mx-auto max-w-xs px-8">
-                  <p className="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                  <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                    <span className="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                    <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                  </p>
-                  <a
-                    href="#"
-                    className="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  >
-                    Get access
-                  </a>
-                  <p className="mt-6 text-xs leading-5 text-gray-600">
-                    Invoices and receipts available for easy company reimbursement
-                  </p>
-                </div>
-              </div>
+            <div className="flex flex-col gap-1">
+              <p className="text-sm font-semibold text-gray-500">000.00.00 도입완료</p>
+              <p className="flex items-end gap-2">
+                <span className="text-xl font-bold">다산 테라타워 DIMC</span>
+                <span className="text-base font-medium text-gray-800">2,500세대 대규모 지식산업센터</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="text-sm font-semibold text-gray-500">000.00.00 도입완료</p>
+              <p className="flex items-end gap-2">
+                <span className="text-xl font-bold">그랑서울 서울</span>
+                <span className="text-base font-medium text-gray-800">종로 프리미엄 임대 빌딩</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <p className="text-sm font-semibold text-gray-500">000.00.00 도입완료</p>
+              <p className="flex items-end gap-2">
+                <span className="text-xl font-bold">가산 현대 publik</span>
+                <span className="text-base font-medium text-gray-800">서울시 최대 규모의 지식산업센터</span>
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        animate={{ y: -100 }}
+        viewport={{ once: true }}
+        transition={{ ease: 'easeIn', duration: 0.6 }}
+        className="mt-[38px] flex h-[600px] items-center rounded-2.5xl border border-gray-100 bg-gray-700 px-[100px]"
+      >
+        <div>
+          <p className="flex items-center gap-3 text-xl font-bold text-white">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2 8.75994C2 6.04468 2 4.68705 2.87868 3.84352C3.75736 3 5.17157 3 8 3H16C18.8284 3 20.2426 3 21.1213 3.84352C22 4.68705 22 6.04468 22 8.75994V9.71993C22 12.4352 22 13.7928 21.1213 14.6363C20.2426 15.4799 18.8284 15.4799 16 15.4799H12.75V17.8409L18.2372 19.5968C18.6301 19.7225 18.8425 20.1303 18.7115 20.5075C18.5805 20.8847 18.1558 21.0886 17.7628 20.9629L12 19.1188L6.23717 20.9629C5.84421 21.0886 5.41947 20.8847 5.28849 20.5075C5.1575 20.1303 5.36987 19.7225 5.76283 19.5968L11.25 17.8409V15.4799H8C5.17157 15.4799 3.75736 15.4799 2.87868 14.6363C2 13.7928 2 12.4352 2 9.71993V8.75994Z"
+                fill="white"
+              />
+            </svg>
+            <span>최적화된 빌딩 및 운영 자동화</span>
+          </p>
+          <h3 className="mt-5 text-[52px] font-bold leading-snug text-white">
+            관리자 통합웹으로
+            <br /> 한번에 해결하세요.
+          </h3>
+          <h5 className="mt-6 text-2xl font-semibold text-blue-200">
+            건물 경쟁력을 확보하고 싶다면, <br />
+            다가올 미래를 미리 준비하세요.
+          </h5>
+        </div>
+      </motion.section>
+      {/* <section className="mt-[38px] flex h-[600px] items-center rounded-2.5xl border border-gray-100 bg-gray-700 px-[100px]"></section> */}
+      <section></section>
     </main>
   );
 }
