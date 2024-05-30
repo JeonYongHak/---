@@ -2,6 +2,6 @@ import React from 'react';
 
 type Props = {};
 
-export default function MettingRooms({}: Props) {
+export default function MeetingRooms({}: Props) {
   return <div>page</div>;
 }
