@@ -59,7 +59,7 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
         reservationId={reservationId}
         startAt={data.startAt}
         endAt={data.endAt}
-        isCanceled={false}
+        isCanceled={data.checkStatus === 'canceled'}
       />
     </main>
   );
