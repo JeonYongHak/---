@@ -10,7 +10,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
+  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`, { cache: 'no-store' });
   return {
     title: `오피스너 회의실 예약`,
     openGraph: {
@@ -23,6 +23,7 @@ export async function generateMetadata({ params: { reservationId } }: Props) {
 export default async function MeetingsAccessPage({ params: { reservationId } }: Props) {
   const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
 
+  // UTC 형태로 기록되어 내려오는 KST 시간을 다시 실제 UTC 시간으로 변경하는 작업
   const startAt = new Date(data.startAt);
   startAt.setHours(startAt.getHours() - 9);
   const endAt = new Date(data.endAt);
@@ -56,9 +57,9 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           <span className="text-sm font-semibold text-gray-800">출입 안내</span>
         </p>
         <span className="text-sm font-medium text-gray-500">
-          {new Date(startAt).toLocaleString('ko-KR')} 부터
+          {new Date(startAt).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 부터
           <br />
-          {new Date(endAt).toLocaleString('ko-KR')} 까지 출입 가능합니다.
+          {new Date(endAt).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 까지 출입 가능합니다.
         </span>
       </div>
       <MeetingsAccessClientPage
