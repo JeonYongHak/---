@@ -16,12 +16,11 @@ type Props = {
 };
 
 export default function MeetingsAccessClientPage({ reservationId, startAt, endAt, isCanceled }: Props) {
-  const tenHourBeforeStart = new Date(startAt);
-  tenHourBeforeStart.setHours(tenHourBeforeStart.getHours() - 10);
+  startAt.setMinutes(startAt.getMinutes() - 10);
 
   const currentTime = new Date();
 
-  const isEarly = currentTime < tenHourBeforeStart;
+  const isEarly = currentTime < startAt;
   const isLate = currentTime > new Date(endAt);
   const isShow = !isEarly && !isLate;
 

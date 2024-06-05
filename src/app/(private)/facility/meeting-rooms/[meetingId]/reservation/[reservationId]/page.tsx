@@ -10,7 +10,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`, { cache: 'no-store' });
+  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
   return {
     title: `오피스너 회의실 예약`,
     openGraph: {
