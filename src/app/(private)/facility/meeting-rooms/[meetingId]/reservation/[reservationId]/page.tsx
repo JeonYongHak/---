@@ -22,6 +22,12 @@ export async function generateMetadata({ params: { reservationId } }: Props) {
 
 export default async function MeetingsAccessPage({ params: { reservationId } }: Props) {
   const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
+
+  const startAt = new Date(data.startAt);
+  startAt.setHours(startAt.getHours() - 9);
+  const endAt = new Date(data.endAt);
+  endAt.setHours(endAt.getHours() - 9);
+
   return (
     <main className="mx-auto flex min-h-[calc(100vh-224px)] max-w-7xl flex-col justify-center bg-gray-100 px-4 sm:px-6 md:min-h-[calc(100vh-174px)] lg:px-8">
       {data.checkStatus === 'canceled' ? (
@@ -50,15 +56,15 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           <span className="text-sm font-semibold text-gray-800">출입 안내</span>
         </p>
         <span className="text-sm font-medium text-gray-500">
-          {new Date(data.startAt).toLocaleString()} 부터
+          {new Date(startAt).toLocaleString('ko-KR')} 부터
           <br />
-          {new Date(data.endAt).toLocaleString()} 까지 출입 가능합니다.
+          {new Date(endAt).toLocaleString('ko-KR')} 까지 출입 가능합니다.
         </span>
       </div>
       <MeetingsAccessClientPage
         reservationId={reservationId}
-        startAt={data.startAt}
-        endAt={data.endAt}
+        startAt={startAt}
+        endAt={endAt}
         isCanceled={data.checkStatus === 'canceled'}
       />
     </main>

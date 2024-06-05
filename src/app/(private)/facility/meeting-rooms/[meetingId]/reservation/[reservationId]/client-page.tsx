@@ -10,19 +10,64 @@ import { useMeetingRoomPasswordQuery } from '@/requests/meetingroom-reservations
 
 type Props = {
   reservationId: string;
-  startAt: string;
-  endAt: string;
+  startAt: Date;
+  endAt: Date;
   isCanceled: boolean;
 };
 
 export default function MeetingsAccessClientPage({ reservationId, startAt, endAt, isCanceled }: Props) {
-  const tenDaysBeforeStart = new Date(startAt);
-  tenDaysBeforeStart.setDate(tenDaysBeforeStart.getDate() - 10);
+  const tenHourBeforeStart = new Date(startAt);
+  tenHourBeforeStart.setHours(tenHourBeforeStart.getHours() - 10);
 
   const currentTime = new Date();
-  const isTimeOut = currentTime > new Date(endAt);
-  const isShow = tenDaysBeforeStart < currentTime && currentTime < new Date(endAt);
+
+  const isEarly = tenHourBeforeStart < new Date(startAt);
+  const isLate = currentTime > new Date(endAt);
+  const isShow = !isEarly && !isLate;
+
   const { data, isLoading, error } = useMeetingRoomPasswordQuery(reservationId, isShow && !isCanceled);
+
+  const renderContents = () => {
+    if (isCanceled) {
+      return <p className="font-medium text-gray-800">이용이 취소되었습니다.</p>;
+    }
+    if (isEarly) {
+      return (
+        <div className="flex flex-col items-center gap-4">
+          <p className="font-medium text-blue-600">예약시간 10분 전부터 비밀번호가 표시될 예정입니다.</p>
+          <span className="isolate flex w-fit overflow-hidden rounded ring-1 ring-gray-300">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <p
+                key={index}
+                className="-ml-px flex h-11 w-11 items-center  justify-center border-x px-3 py-2 text-sm font-semibold text-gray-900"
+              >
+                {isShow ? data?.data[index] : '・'}
+              </p>
+            ))}
+          </span>
+        </div>
+      );
+    }
+    if (isLate) {
+      return <p className="font-medium text-gray-500">이용 시간이 만료되었습니다.</p>;
+    }
+    return (
+      <div className="flex flex-col items-center gap-4">
+        <p className="font-medium text-blue-600">도어락에 비밀번호를 입력해주세요.</p>
+        <span className="isolate flex w-fit overflow-hidden rounded ring-1 ring-gray-300">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <p
+              key={index}
+              className="-ml-px flex h-11 w-11 items-center  justify-center border-x px-3 py-2 text-sm font-semibold text-gray-900"
+            >
+              {data?.data[index] || '・'}
+            </p>
+          ))}
+        </span>
+      </div>
+    );
+  };
+
   return (
     <TabGroup>
       <TabList className="flex h-12 rounded-t-lg bg-gray-50">
@@ -68,31 +113,7 @@ export default function MeetingsAccessClientPage({ reservationId, startAt, endAt
               />
             </div>
           ) : (
-            <>
-              {isTimeOut ? (
-                <p
-                  className="font-medium text-gray-500
-                "
-                >
-                  이용 시간이 만료되었습니다.
-                </p>
-              ) : (
-                <p className="font-medium text-blue-600">
-                  {isShow ? `도어락에 비밀번호를 입력해주세요.` : `오전 11:00에 비밀번호가 표시됩니다.`}
-                </p>
-              )}
-
-              <span className="isolate flex w-fit overflow-hidden rounded ring-1 ring-gray-300">
-                {Array.from({ length: 6 }).map((_, index) => (
-                  <p
-                    key={index}
-                    className="-ml-px flex h-11 w-11 items-center  justify-center border-x px-3 py-2 text-sm font-semibold text-gray-900"
-                  >
-                    {isShow ? data?.data[index] : '・'}
-                  </p>
-                ))}
-              </span>
-            </>
+            renderContents()
           )}
         </TabPanel>
         <TabPanel unmount={false}>
