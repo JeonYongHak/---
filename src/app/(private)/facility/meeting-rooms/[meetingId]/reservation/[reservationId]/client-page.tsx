@@ -21,7 +21,7 @@ export default function MeetingsAccessClientPage({ reservationId, startAt, endAt
 
   const currentTime = new Date();
 
-  const isEarly = tenHourBeforeStart < new Date(startAt);
+  const isEarly = currentTime < tenHourBeforeStart;
   const isLate = currentTime > new Date(endAt);
   const isShow = !isEarly && !isLate;
 
@@ -41,7 +41,7 @@ export default function MeetingsAccessClientPage({ reservationId, startAt, endAt
                 key={index}
                 className="-ml-px flex h-11 w-11 items-center  justify-center border-x px-3 py-2 text-sm font-semibold text-gray-900"
               >
-                {isShow ? data?.data[index] : '・'}
+                {`・`}
               </p>
             ))}
           </span>
