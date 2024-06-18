@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { redirect } from 'next/navigation';
 
 const includedFeatures = [
   'Private forum access',
@@ -16,6 +17,7 @@ const navigation = [
 ];
 
 export default function Home() {
+  redirect('https://officer.imweb.me');
   return (
     <main className="mx-auto w-full bg-white px-6 lg:w-[1500px]">
       <div className="h-[68px]"></div>
