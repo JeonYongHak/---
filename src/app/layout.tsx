@@ -12,6 +12,10 @@ const myFont = localFont({
 export const metadata: Metadata = {
   title: '오피스너',
   description: '편리한 오피스 생활의 시작 - 오피스너',
+  openGraph: {
+    title: "오피스너",
+    description: '편리한 오피스 생활의 시작 - 오피스너',
+  }
 };
 
 export default function RootLayout({
