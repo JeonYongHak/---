@@ -1,4 +1,6 @@
-export const RisingArrowImage = () => {
+import { SVGProps } from 'react';
+
+export const RisingArrowImage = ({ ...props }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="201"
@@ -6,7 +8,8 @@ export const RisingArrowImage = () => {
       viewBox="0 0 201 180"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-full w-full"
+      {...props}
+      // className="h-full w-full"
     >
       <g clipPath="url(#clip0_389_8942)">
         <path

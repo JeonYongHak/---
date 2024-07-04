@@ -24,16 +24,16 @@ export default function RootLayout({
       <body className={myFont.className}>
         <ReactQueryProviders>{children}</ReactQueryProviders>
 
-        <footer className="flex w-full justify-center bg-gray-800 py-[100px] md:pb-10 md:pt-[100px]">
+        <footer className="flex w-full justify-center bg-gray-800 py-[100px] lg:pb-10 lg:pt-[100px]">
           <div className="w-[1500px]">
-            <div className="flex w-full flex-col items-center gap-6 md:items-start md:px-10">
+            <div className="flex w-full flex-col items-center gap-6 lg:items-start lg:px-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="141"
                 height="35"
                 viewBox="0 0 141 35"
                 fill="none"
-                className="mb-5 h-5 md:mb-0 md:h-auto"
+                className="mb-5 h-5 lg:mb-0 lg:h-auto"
               >
                 <path
                   d="M140.732 0V33.04C140.732 33.96 139.732 34.2 137.932 34.2C136.252 34.2 135.212 34 135.212 33.08V13.56H126.572V8.88H135.212V0H140.732ZM118.372 20.84H130.452C131.372 20.84 131.532 21.72 131.532 23.2C131.532 24.72 131.372 25.52 130.452 25.52H117.052C116.012 25.52 114.532 24.52 113.652 23.64C112.812 22.76 111.972 21.52 111.972 20.72V2.76H117.492V19.92C117.492 20.52 117.812 20.84 118.372 20.84Z"
@@ -52,14 +52,14 @@ export default function RootLayout({
                   fill="white"
                 />
               </svg>
-              <div className="flex flex-col items-center text-sm leading-snug text-gray-300 md:items-start md:text-base">
-                <span className="font-bold">주식회사 두꺼비세상</span>
-                <span>서울특별시 구로구 디지털로 300, 지밸리비즈플라자 15층 A</span>
-                <span>대표자 : 유광연 | 사업자등록번호 204-86-40665</span>
+              <div className="flex flex-col items-center text-sm leading-snug text-gray-300 lg:items-start lg:text-base">
+                <span className="font-bold">(주)두꺼비세상</span>
+                <span>서울특별시 구로구 디지털로 300 지밸리비즈플라자 15층</span>
+                <span>대표자 유광연 | 사업자등록번호 204-86-40665</span>
               </div>
 
-              <div className="flex text-xs font-normal text-gray-300 md:text-base">
-                &copy; 2024 Officener, Inc. All rights reserved.
+              <div className="flex text-xs font-normal text-gray-300 lg:text-base">
+                &copy; 2024 dukkubisesang. All rights reserved.
               </div>
             </div>
           </div>

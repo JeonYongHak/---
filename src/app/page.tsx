@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main className="flex w-full flex-col items-center overflow-x-hidden bg-white">
       <div className="fixed z-30 flex w-full justify-center bg-white">
-        <div className="flex w-full items-center justify-between py-3 pl-6 pr-3 md:max-w-[1500px] md:px-10 md:py-3.5">
+        <div className="flex w-full items-center justify-between py-3 pl-6 pr-3 lg:max-w-[1500px] lg:px-10 lg:py-3.5">
           <span className="flex items-center justify-items-center gap-1">
             <svg
               width="132"
@@ -34,7 +34,7 @@ export default function Home() {
               viewBox="0 0 132 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-auto cursor-pointer md:h-10"
+              className="h-7 w-auto cursor-pointer lg:h-10"
               onClick={() => router.push('/')}
             >
               <path
@@ -56,71 +56,71 @@ export default function Home() {
             </svg>
           </span>
           <button
-            className="flex justify-center rounded-lg bg-blue-500 p-2.5 font-medium leading-none md:w-[200px] md:p-3.5"
+            className="flex justify-center rounded-lg bg-blue-500 p-2.5 font-medium leading-none lg:w-[200px] lg:p-3.5"
             onClick={() => router.push('/inquiry')}
           >
-            <span className="hidden text-xl leading-6 text-white md:block">도입 문의하기</span>
-            <span className="block text-xs text-white md:hidden">도입문의</span>
+            <span className="hidden text-xl leading-6 text-white lg:block">도입 문의하기</span>
+            <span className="block text-xs text-white lg:hidden">도입문의</span>
           </button>
         </div>
       </div>
 
-      <section className="mt-[60px] w-full md:mt-[80px]">
-        <div className="flex flex-col md:gap-8">
-          <div className="md:container">
-            <article className="relative flex flex-col items-center gap-5 bg-gray-800 px-6 pb-10 pt-20 md:min-h-[40rem] md:flex-row md:justify-center md:rounded-2.5xl md:py-20">
-              <div className="flex flex-col items-center md:w-[42.813rem] md:items-start">
-                <h2 className="mb-3 text-2xl font-bold leading-normal text-white md:mb-6 md:text-[3.625rem]">
+      <section className="mt-[60px] w-full lg:mt-[80px]">
+        <div className="flex flex-col lg:gap-8">
+          <div className="lg:container lg:px-6">
+            <article className="relative flex flex-col items-center gap-5 bg-gray-800 px-6 pb-10 pt-20 lg:min-h-[40rem] lg:flex-row lg:justify-center lg:rounded-2.5xl lg:py-20">
+              <div className="flex flex-col items-center lg:w-[42.813rem] lg:items-start">
+                <h2 className="mb-3 text-2xl font-bold leading-normal text-white lg:mb-6 lg:text-[3.625rem]">
                   오피스 빌딩 관리의 모든 것 <br />
                   오피스너에서 쉽고 간편하게
                 </h2>
-                <p className="text-sm font-semibold text-white md:mb-[150px] md:text-2xl">
-                  관리 소요는 낮추고, 입주 경험은 높이세요
+                <p className="text-sm font-semibold text-white lg:mb-[150px] lg:text-2xl">
+                  효율적인 건물 관리로 입주 경험 향상까지
                 </p>
                 <button
-                  className="absolute bottom-[10%] z-10 w-[200px] rounded-xl bg-blue-500 p-3.5 md:static md:mb-10"
+                  className="absolute bottom-[10%] z-10 w-[200px] rounded-xl bg-blue-500 p-3.5 lg:static lg:mb-10"
                   onClick={() => router.push('/inquiry')}
                 >
-                  <span className="font-medium leading-5 text-white md:text-xl md:font-semibold md:leading-5">
+                  <span className="font-medium leading-5 text-white lg:text-xl lg:font-semibold lg:leading-5">
                     지금 시작하기
                   </span>
                 </button>
               </div>
-              <div className="w-full md:w-auto">
+              <div className="w-full lg:w-auto">
                 <MainImage />
               </div>
             </article>
           </div>
-          <div className="container">
-            <div className="my-14 flex flex-col gap-8 md:mb-[5.125rem] md:flex-row md:gap-5 ">
-              <article className="relative flex flex-1 justify-between gap-2 rounded-2.5xl bg-gray-700 px-5 py-6 md:px-10 md:py-9">
-                <div className="flex flex-col gap-2 md:gap-6">
-                  <h3 className="text-base font-bold leading-snug text-white md:text-[28px]">
+          <div className="container lg:px-6">
+            <div className="my-14 flex flex-col gap-8 lg:mb-[5.125rem] lg:flex-row lg:gap-5 ">
+              <article className="relative flex flex-1 justify-between gap-2 rounded-2.5xl bg-gray-700 px-5 py-6 lg:px-10 lg:py-9">
+                <div className="flex flex-col gap-2 lg:gap-6">
+                  <h3 className="text-base font-bold leading-snug text-white lg:text-[28px]">
                     프리미엄 건물 가치를 위한 선택
                   </h3>
-                  <p className="text-xs font-semibold leading-snug text-gray-300 md:text-2xl">
+                  <p className="text-xs font-semibold leading-snug text-gray-300 lg:text-2xl">
                     국내 최대 규모, 최고의 건물에서
                     <br />
                     오피스너를 선택했습니다.
                   </p>
                 </div>
-                <div className="relative h-auto w-[60px] md:w-[10.625rem]">
+                <div className="relative h-auto w-[60px] lg:w-[10.625rem]">
                   <Image src="/images/premium_building.png" alt="" sizes="100%" fill style={{ objectFit: 'contain' }} />
                 </div>
               </article>
-              <article className="relative flex flex-1 items-center justify-between gap-2 rounded-2.5xl bg-blue-100 px-5 py-6 md:items-start md:px-10 md:pb-[1.625rem] md:pt-9">
-                <div className="order-2 flex flex-col gap-2 md:order-1 md:gap-6">
-                  <h3 className="text-base font-bold leading-snug text-blue-500 md:text-[28px]">
+              <article className="relative flex flex-1 items-center justify-between gap-2 rounded-2.5xl bg-blue-100 px-5 py-6 lg:items-start lg:px-10 lg:pb-[1.625rem] lg:pt-9">
+                <div className="order-2 flex flex-col gap-2 lg:order-1 lg:gap-6">
+                  <h3 className="text-base font-bold leading-snug text-blue-500 lg:text-[28px]">
                     지금 이 순간에도,
                     <br />
                     스마트한 입주경험을 누리고 있습니다.
                   </h3>
-                  <p className="text-xs font-semibold leading-snug text-gray-400 md:text-2xl">
+                  <p className="flex text-xs font-semibold leading-snug text-gray-400 lg:text-2xl">
                     입주자가 만족하는 건물로 탈바꿈할 기회!
                   </p>
                 </div>
-                <div className="relative order-1 h-[60px] w-auto md:order-2 md:h-full">
-                  <RisingArrowImage />
+                <div className="relative order-1 flex h-full w-[60px] items-center lg:order-2 lg:w-[10.625rem]">
+                  <RisingArrowImage className="h-auto w-full" />
                 </div>
               </article>
             </div>
@@ -128,16 +128,16 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-full bg-gray-50 py-[100px] md:py-[8.5rem]">
+      <div className="w-full bg-gray-50 py-[100px] lg:py-[8.5rem]">
         <div className="flex flex-col items-center">
-          <h3 className="mb-4 text-2xl font-bold leading-normal text-gray-800 md:mb-10 md:text-[3.25rem]">
+          <h3 className="mb-4 text-2xl font-bold leading-normal text-gray-800 lg:mb-10 lg:text-[3.25rem]">
             <span className="text-blue-500">건물 경쟁력을 확보</span>하고 싶다면,
             <br />
             다가올 미래를 미리 준비하세요.
           </h3>
-          <h4 className="mb-[60px] text-center text-sm font-semibold leading-snug text-gray-600 md:mb-[7.5rem] md:text-[2rem]">
+          <h4 className="mb-[60px] text-center text-sm font-semibold leading-snug text-gray-600 lg:mb-[7.5rem] lg:text-[2rem]">
             업계 선두 고객분들과
-            <br className="block md:hidden" />
+            <br className="block lg:hidden" />
             &nbsp;차세대 스마트 빌딩의 혁신을 만들어 나가고 있습니다
           </h4>
         </div>
@@ -148,17 +148,17 @@ export default function Home() {
             count={4}
             duration={16}
           >
-            <div className="relative h-[408px] w-[303px] flex-shrink-0 overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.ChartSquare size={24} className="size-5 md:size-6" />
+            <div className="relative h-[408px] w-[303px] flex-shrink-0 overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.ChartSquare size={24} className="size-5 lg:size-6" />
                 건물의 모든 기록 관리
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 기록된 건물 데이터로
                 <br />
                 탄탄한 운영정책을 만드세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 지속적인 건물 관리를 위해서
                 <br />
                 건물의 모든 자료와 데이터를 한 곳에서 모아보세요
@@ -169,7 +169,7 @@ export default function Home() {
                 height="328"
                 viewBox="0 0 419 328"
                 fill="none"
-                className="absolute left-1/2 h-auto w-full -translate-x-1/2 md:-bottom-2"
+                className="absolute left-1/2 h-auto w-full -translate-x-1/2 lg:-bottom-2"
               >
                 <path
                   d="M755.06 271.355C700.733 271.355 720.294 160.821 674.68 160.821C629.065 160.821 644.27 224.479 586.782 224.479C529.294 224.479 563.975 55.2394 504.266 55.2394C444.557 55.2394 467.365 157.355 409.791 157.355C352.218 157.355 352.218 7.70275 324.371 7.70275C296.524 7.70275 298.317 125.169 271.154 125.169C243.99 125.169 249.457 51.7732 221.183 51.7732C192.909 51.7732 196.24 190.202 158.228 190.202C120.216 190.202 141.144 126.599 105.096 126.599C69.0491 126.599 86.5605 193.008 42.0565 193.008C-2.44754 193.008 18.2241 0 -29.6114 0C-77.4468 0 -74.1153 202.086 -122.976 202.086C-171.836 202.086 -164.234 116.091 -215.23 116.091C-266.226 116.091 -244.529 291.602 -296.636 291.602C-348.742 291.602 -349.852 176.942 -390 176.942V342H756L755.06 271.355Z"
@@ -190,22 +190,22 @@ export default function Home() {
                 </defs>
               </svg>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.Buildings size={24} className="size-5 md:size-6" />
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.Buildings size={24} className="size-5 lg:size-6" />
                 건물 전용 앱
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 우리 건물 맞춤형으로
                 <br />
                 필요한 기능만 세팅하세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 다양한 기능을 우리 건물에 맞게
                 <br />
                 세팅할 수 있어요
               </span>
-              <div className="absolute -bottom-5 left-1/2 h-[209px] w-[326px] -translate-x-1/2 overflow-hidden md:h-[361px] md:w-[570px]">
+              <div className="absolute -bottom-5 left-1/2 h-[209px] w-[326px] -translate-x-1/2 overflow-hidden lg:h-[361px] lg:w-[570px]">
                 <Image
                   src="/images/custom_setting.png"
                   alt=""
@@ -215,57 +215,57 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.Moneys size={24} className="md:isze-6 size-5" />
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.Moneys size={24} className="lg:isze-6 size-5" />
                 시설 유료화
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 관리 인력은 줄이고,
                 <br />
                 추가 수익을 창출하세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 시설별 특화된 예약 시스템을 구축하고,
                 <br />
                 시설 자체를 유료 상품화 하세요
               </span>
-              <div className="absolute -bottom-2 left-6 h-[209px] w-[326px] md:-bottom-[60px] md:left-10 md:h-[400px] md:w-[550px]">
+              <div className="absolute -bottom-2 left-6 h-[209px] w-[326px] lg:-bottom-[60px] lg:left-10 lg:h-[400px] lg:w-[550px]">
                 <Image src="/images/facility_fee.png" alt="" width={550} height={400} style={{ objectFit: 'cover' }} />
               </div>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
                 <Icon.LikeDislike size={24} />
                 전자투표
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 연령대와 상관없이 쉬운
                 <br />
                 전자 투표를 진행해보세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 평균 투표 참여율 80%이상!
                 <br />
                 카카오톡, 문자로 보내는 전자투표
               </span>
 
-              <div className="absolute -bottom-[68px] left-1/2 h-[260px] w-[255px] -translate-x-1/2 md:-bottom-8 md:h-[382px] md:w-[354px]">
+              <div className="absolute -bottom-[68px] left-1/2 h-[260px] w-[255px] -translate-x-1/2 lg:-bottom-8 lg:h-[382px] lg:w-[354px]">
                 <Image src="/images/vote.png" alt="" width={354} height={382} style={{ objectFit: 'cover' }} />
               </div>
             </div>
             {/* 반복 카드 */}
-            <div className="relative h-[408px] w-[303px] flex-shrink-0 overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.ChartSquare size={24} className="size-5 md:size-6" />
+            <div className="relative h-[408px] w-[303px] flex-shrink-0 overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.ChartSquare size={24} className="size-5 lg:size-6" />
                 건물의 모든 기록 관리
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 기록된 건물 데이터로
                 <br />
                 탄탄한 운영정책을 만드세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 지속적인 건물 관리를 위해서
                 <br />
                 건물의 모든 자료와 데이터를 한 곳에서 모아보세요
@@ -276,7 +276,7 @@ export default function Home() {
                 height="328"
                 viewBox="0 0 419 328"
                 fill="none"
-                className="absolute left-1/2 h-auto w-full -translate-x-1/2 md:-bottom-2"
+                className="absolute left-1/2 h-auto w-full -translate-x-1/2 lg:-bottom-2"
               >
                 <path
                   d="M755.06 271.355C700.733 271.355 720.294 160.821 674.68 160.821C629.065 160.821 644.27 224.479 586.782 224.479C529.294 224.479 563.975 55.2394 504.266 55.2394C444.557 55.2394 467.365 157.355 409.791 157.355C352.218 157.355 352.218 7.70275 324.371 7.70275C296.524 7.70275 298.317 125.169 271.154 125.169C243.99 125.169 249.457 51.7732 221.183 51.7732C192.909 51.7732 196.24 190.202 158.228 190.202C120.216 190.202 141.144 126.599 105.096 126.599C69.0491 126.599 86.5605 193.008 42.0565 193.008C-2.44754 193.008 18.2241 0 -29.6114 0C-77.4468 0 -74.1153 202.086 -122.976 202.086C-171.836 202.086 -164.234 116.091 -215.23 116.091C-266.226 116.091 -244.529 291.602 -296.636 291.602C-348.742 291.602 -349.852 176.942 -390 176.942V342H756L755.06 271.355Z"
@@ -297,22 +297,22 @@ export default function Home() {
                 </defs>
               </svg>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.Buildings size={24} className="size-5 md:size-6" />
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.Buildings size={24} className="size-5 lg:size-6" />
                 건물 전용 앱
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 우리 건물 맞춤형으로
                 <br />
                 필요한 기능만 세팅하세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 다양한 기능을 우리 건물에 맞게
                 <br />
                 세팅할 수 있어요
               </span>
-              <div className="absolute -bottom-5 left-1/2 h-[209px] w-[326px] -translate-x-1/2 overflow-hidden md:h-[361px] md:w-[570px]">
+              <div className="absolute -bottom-5 left-1/2 h-[209px] w-[326px] -translate-x-1/2 overflow-hidden lg:h-[361px] lg:w-[570px]">
                 <Image
                   src="/images/custom_setting.png"
                   alt=""
@@ -322,42 +322,42 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
-                <Icon.Moneys size={24} className="md:isze-6 size-5" />
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
+                <Icon.Moneys size={24} className="lg:isze-6 size-5" />
                 시설 유료화
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 관리 인력은 줄이고,
                 <br />
                 추가 수익을 창출하세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 시설별 특화된 예약 시스템을 구축하고,
                 <br />
                 시설 자체를 유료 상품화 하세요
               </span>
-              <div className="absolute -bottom-2 left-6 h-[209px] w-[326px] md:-bottom-[60px] md:left-10 md:h-[400px] md:w-[550px]">
+              <div className="absolute -bottom-2 left-6 h-[209px] w-[326px] lg:-bottom-[60px] lg:left-10 lg:h-[400px] lg:w-[550px]">
                 <Image src="/images/facility_fee.png" alt="" width={550} height={400} style={{ objectFit: 'cover' }} />
               </div>
             </div>
-            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md md:h-[42.5rem] md:w-[26.25rem] md:px-10 md:pt-[4.25rem]">
-              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 md:text-xl">
+            <div className="relative flex h-[408px] w-[303px] flex-shrink-0 flex-col overflow-hidden rounded-2.5xl bg-white px-6 pt-11 shadow-md lg:h-[42.5rem] lg:w-[26.25rem] lg:px-10 lg:pt-[4.25rem]">
+              <span className="mb-4 flex items-center gap-2 text-sm font-bold leading-snug text-sky-400 lg:text-xl">
                 <Icon.LikeDislike size={24} />
                 전자투표
               </span>
-              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 md:mb-3 md:text-[1.75rem]">
+              <span className="mb-4 flex text-lg font-bold leading-normal text-gray-800 lg:mb-3 lg:text-[1.75rem]">
                 연령대와 상관없이 쉬운
                 <br />
                 전자 투표를 진행해보세요
               </span>
-              <span className="flex text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+              <span className="flex text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
                 평규 투표 참여율 80%이상!
                 <br />
                 카카오톡, 문자로 보내는 전자투표
               </span>
 
-              <div className="absolute -bottom-[68px] left-1/2 h-[260px] w-[255px] -translate-x-1/2 md:-bottom-8 md:h-[382px] md:w-[354px]">
+              <div className="absolute -bottom-[68px] left-1/2 h-[260px] w-[255px] -translate-x-1/2 lg:-bottom-8 lg:h-[382px] lg:w-[354px]">
                 <Image src="/images/vote.png" alt="" width={354} height={382} style={{ objectFit: 'cover' }} />
               </div>
             </div>
@@ -365,18 +365,18 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="container">
-        <div className="flex flex-col items-center justify-center gap-5 py-[100px] md:gap-10 md:py-[8.5rem]">
-          <h3 className="mb-10 text-center text-2xl font-bold leading-normal md:mb-10 md:text-[52px]">
+      <section className="container lg:px-6">
+        <div className="flex flex-col items-center justify-center gap-5 py-[100px] lg:gap-10 lg:py-[8.5rem]">
+          <h3 className="mb-10 text-center text-2xl font-bold leading-normal lg:mb-10 lg:text-[52px]">
             <span className="text-green-500">좋은 입주 경험</span>이<br />
             결국 프리미엄 오피스 빌딩의
-            <br className="block md:hidden" />
+            <br className="block lg:hidden" />
             핵심입니다.
           </h3>
           <Image src="/images/banner.png" alt="" width={1500} height={389} className="rounded-2.5xl" />
-          <div className="flex w-full flex-col gap-5 md:h-[480px] md:flex-row md:gap-10">
-            <article className="flex w-full flex-col items-center gap-[70px] overflow-hidden rounded-2.5xl bg-gray-50 px-4 py-[60px] shadow-md shadow-gray-300 md:w-2/5 md:items-start md:gap-20 md:p-[60px] md:shadow-none ">
-              <p className="text-center text-xl font-bold leading-normal text-gray-800 md:text-start md:text-[32px] md:text-gray-700">
+          <div className="flex w-full flex-col gap-5 lg:min-h-[480px] lg:flex-row lg:gap-10">
+            <article className="flex w-full flex-col items-center gap-[70px] rounded-2.5xl bg-gray-50 px-4 py-[60px] shadow-md shadow-gray-300 lg:w-2/5 lg:items-start lg:gap-20 lg:p-[60px] lg:shadow-none ">
+              <p className="text-center text-xl font-bold leading-normal text-gray-800 lg:text-start lg:text-[32px] lg:text-gray-700">
                 입주사뿐만 아니라,
                 <br />
                 외부에 있는 소유자까지
@@ -385,13 +385,13 @@ export default function Home() {
               </p>
               <Image src="/images/communicate.png" alt="" width={480} height={131} className="object-contain" />
             </article>
-            <article className="relative flex h-[548px] w-full flex-col items-center overflow-hidden rounded-2.5xl bg-gray-50 px-5 py-[60px] shadow-md shadow-gray-300 md:h-auto md:w-3/5 md:items-start md:p-[60px] md:shadow-none">
-              <div className="mb-10 flex text-center text-xl font-bold leading-normal text-gray-800 md:mb-5 md:text-start md:text-[32px] md:text-gray-700">
+            <article className="relative flex min-h-[548px] w-full flex-col items-center overflow-hidden rounded-2.5xl bg-gray-50 px-5 py-[60px] shadow-md shadow-gray-300 lg:h-auto lg:w-3/5 lg:items-start lg:p-[60px] lg:shadow-none">
+              <div className="mb-[368px] flex text-center text-xl font-bold leading-normal text-gray-800 lg:mb-5 lg:text-start lg:text-[32px] lg:text-gray-700">
                 우리 건물의 인증된 입주자에게
                 <br />
                 차원이 다른 편리함을 제공하세요
               </div>
-              <div className="hidden gap-5 md:flex">
+              <div className="mb-44 hidden gap-5 lg:flex">
                 <span className="flex items-center gap-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
@@ -419,206 +419,206 @@ export default function Home() {
                 <span></span>
               </div>
 
-              <div className="absolute left-0 top-40 order-1 md:top-[280px]">
+              <div className="absolute bottom-72 left-0 order-1 lg:bottom-10">
                 <CardListAnimation
                   card={{ width: 160, gap: 16 }}
                   mobileCard={{ width: 100, gap: 16 }}
                   count={12}
                   duration={8}
                 >
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#8FB9FF] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#8FB9FF] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       불편사항
                       <br />
                       접수
                     </span>
-                    <Icon.Edit2 variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Edit2 variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBCFE8] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBCFE8] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       엘리베이터
                       <br />
                       점검안내
                     </span>
-                    <Icon.Alarm variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Alarm variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBBF24] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBBF24] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       회의실
                       <br />
                       예약신청
                     </span>
-                    <Icon.CalendarEdit variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.CalendarEdit variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#BAE6FD] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#BAE6FD] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       정기주차
                       <br />
                       신청서
                     </span>
-                    <Icon.Car variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Car variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FF73CD] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FF73CD] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       입주자/소유자
                       <br />
                       전자투표
                     </span>
-                    <Icon.LikeDislike variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.LikeDislike variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#38BDF8] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#38BDF8] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       이번달
                       <br />
                       고지서
                     </span>
-                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#AABFE5] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#AABFE5] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       건물
                       <br />
                       운영정책
                     </span>
-                    <Icon.Paperclip variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Paperclip variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#2ADBA2] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#2ADBA2] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       라운지
                       <br />
                       예약
                     </span>
-                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FCA5A5] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FCA5A5] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       장비
                       <br />
                       대여 신청
                     </span>
-                    <Icon.BoxAdd variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.BoxAdd variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#C7D2FE] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#C7D2FE] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       실내 온도
                       <br />
                       피드백
                     </span>
-                    <Icon.Sun variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Sun variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FDBA74] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FDBA74] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       출입카드
                       <br />
                       발급
                     </span>
-                    <Icon.CardAdd variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.CardAdd variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#6366F1] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#6366F1] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       이번주
                       <br />
                       구내 식단표
                     </span>
-                    <Icon.Coffee variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Coffee variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
                   {/* 추가 카드 컴포넌트 */}
 
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#8FB9FF] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#8FB9FF] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       불편사항
                       <br />
                       접수
                     </span>
-                    <Icon.Edit2 variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Edit2 variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBCFE8] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBCFE8] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       엘리베이터
                       <br />
                       점검안내
                     </span>
-                    <Icon.Alarm variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Alarm variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBBF24] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FBBF24] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       회의실
                       <br />
                       예약신청
                     </span>
-                    <Icon.CalendarEdit variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.CalendarEdit variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#BAE6FD] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#BAE6FD] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       정기주차
                       <br />
                       신청서
                     </span>
-                    <Icon.Car variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Car variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FF73CD] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FF73CD] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       입주자/소유자
                       <br />
                       전자투표
                     </span>
-                    <Icon.LikeDislike variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.LikeDislike variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#38BDF8] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#38BDF8] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       이번달
                       <br />
                       고지서
                     </span>
-                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#AABFE5] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#AABFE5] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       건물
                       <br />
                       운영정책
                     </span>
-                    <Icon.Paperclip variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Paperclip variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#2ADBA2] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#2ADBA2] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       라운지
                       <br />
                       예약
                     </span>
-                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.ReceiptItem variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FCA5A5] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FCA5A5] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       장비
                       <br />
                       대여 신청
                     </span>
-                    <Icon.BoxAdd variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.BoxAdd variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#C7D2FE] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#C7D2FE] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       실내 온도
                       <br />
                       피드백
                     </span>
-                    <Icon.Sun variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Sun variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FDBA74] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#FDBA74] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       출입카드
                       <br />
                       발급
                     </span>
-                    <Icon.CardAdd variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.CardAdd variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
-                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#6366F1] p-3 text-white md:size-40 md:p-5">
-                    <span className="text-sm font-bold md:text-xl">
+                  <div className="flex size-[100px] flex-col justify-between rounded-2.5xl bg-[#6366F1] p-3 text-white lg:size-40 lg:p-5">
+                    <span className="text-sm font-bold lg:text-xl">
                       이번주
                       <br />
                       구내 식단표
                     </span>
-                    <Icon.Coffee variant="Bold" size={36} className="size-6 md:size-9" />
+                    <Icon.Coffee variant="Bold" size={36} className="size-6 lg:size-9" />
                   </div>
                 </CardListAnimation>
               </div>
@@ -628,7 +628,7 @@ export default function Home() {
                 width={391}
                 height={305}
                 quality={100}
-                className="absolute bottom-0 z-10 h-[256px] w-[200px] object-contain shadow-gray-300 md:hidden"
+                className="absolute bottom-0 z-10 h-[256px] w-[200px] object-contain shadow-gray-300 lg:hidden"
               />
               <Image
                 src="/images/man.png"
@@ -636,33 +636,33 @@ export default function Home() {
                 width={214}
                 height={163}
                 quality={100}
-                className="absolute -bottom-1.5 z-20 h-[107px] w-[140px] translate-x-[76px] md:hidden"
+                className="absolute -bottom-1.5 z-20 h-[107px] w-[140px] translate-x-[76px] lg:hidden"
               />
             </article>
           </div>
         </div>
       </section>
 
-      <section className="relative flex h-[440px] w-full items-center justify-center overflow-hidden md:h-[360px]">
+      <section className="relative flex h-[440px] w-full items-center justify-center overflow-hidden lg:h-[360px]">
         <Image
           src="/images/buildings.png"
           alt=""
           width={1920}
           height={1280}
-          className="absolute z-0 h-full object-cover md:h-auto md:w-full md:translate-y-[10%] md:object-center"
+          className="absolute z-0 h-full object-cover lg:h-auto lg:w-full lg:translate-y-[10%] lg:object-center"
         />
         <div className="z-10 flex flex-col items-center gap-5">
           <div className="flex flex-col items-center">
-            <span className="mb-2 text-xl font-bold text-gray-800 md:text-[28px] md:leading-tight ">
+            <span className="mb-2 text-xl font-bold text-gray-800 lg:text-[28px] lg:leading-tight ">
               상담이 필요하신가요?
             </span>
-            <span className="md:h-[360px]] h-full w-44 text-center text-[32px] font-bold leading-relaxed text-white md:w-full md:text-[52px]">
+            <span className="lg:h-[360px]] h-full w-44 text-center text-[32px] font-bold leading-relaxed text-white lg:w-full lg:text-[52px]">
               전화문의 1833-9092
             </span>
           </div>
 
           <button
-            className="flex w-[200px] items-center justify-center gap-1 rounded-[10px] bg-gray-800 p-[14px] font-medium leading-none text-white md:p-[16px]"
+            className="flex w-[200px] items-center justify-center gap-1 rounded-[10px] bg-gray-800 p-[14px] font-medium leading-none text-white lg:p-[16px]"
             onClick={() => router.push('/inquiry')}
           >
             <Icon.Message size={20} />

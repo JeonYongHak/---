@@ -21,14 +21,14 @@ export default function InquiryPage() {
   return (
     <main className="flex w-full flex-col items-center overflow-x-hidden bg-white">
       <div className="fixed z-30 flex w-full justify-center bg-white">
-        <div className="flex w-full items-center justify-between py-3 pl-6 pr-3 md:max-w-[1500px] md:px-10 md:py-3.5">
+        <div className="flex w-full items-center justify-between py-3 pl-6 pr-3 lg:max-w-[1500px] lg:px-10 lg:py-3.5">
           <svg
             width="132"
             height="40"
             viewBox="0 0 132 40"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-auto cursor-pointer md:h-10"
+            className="h-7 w-auto cursor-pointer lg:h-10"
             onClick={() => router.push('/')}
           >
             <path
@@ -49,18 +49,18 @@ export default function InquiryPage() {
             />
           </svg>
           <button
-            className="flex justify-center rounded-lg bg-gray-800 p-2.5 font-medium md:p-3.5"
+            className="flex justify-center rounded-lg bg-gray-800 p-2.5 font-medium lg:p-3.5"
             onClick={() => router.push('/')}
           >
-            <span className="flex items-center justify-center gap-1 text-xs font-medium leading-none text-white md:w-[108px] md:text-xl md:leading-6">
-              <Icon.Home2 variant="Bold" size={24} className="size-4 md:size-6" />
+            <span className="flex items-center justify-center gap-1 text-xs font-medium leading-none text-white lg:w-[108px] lg:text-xl lg:leading-6">
+              <Icon.Home2 variant="Bold" size={24} className="size-4 lg:size-6" />
               홈으로
             </span>
           </button>
         </div>
       </div>
 
-      <div className="hidden w-full justify-center bg-blue-500 py-20 md:mt-[80px] md:flex">
+      <div className="hidden w-full justify-center bg-blue-500 py-20 lg:mt-[80px] lg:flex">
         <span className="text-center text-[32px] font-bold leading-snug text-white">
           무료 건물 컨설팅으로
           <br />
@@ -69,7 +69,7 @@ export default function InquiryPage() {
       </div>
 
       {isSuccess ? (
-        <div className="mt-[60px] flex flex-col items-center gap-6 px-6 py-[100px] md:mb-40 md:mt-[100px] md:gap-10">
+        <div className="mt-[60px] flex flex-col items-center gap-6 px-6 py-[100px] lg:mb-40 lg:mt-[100px] lg:gap-10">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
             <path
               fillRule="evenodd"
@@ -80,7 +80,7 @@ export default function InquiryPage() {
           </svg>
           <div className="flex flex-col items-center">
             <span className="mb-4 text-xl font-semibold leading-normal text-blue-500">문의해주셔서 감사합니다!</span>
-            <span className="mb-10 text-center text-sm font-semibold leading-snug text-gray-500 md:text-xl">
+            <span className="mb-10 text-center text-sm font-semibold leading-snug text-gray-500 lg:text-xl">
               담당자님의 고민을 빠르게 해결할 수 있도록
               <br />
               영업일 1일 이내 연락 드리겠습니다.
@@ -94,55 +94,53 @@ export default function InquiryPage() {
           </div>
         </div>
       ) : (
-        <div className="mt-[60px] flex w-full flex-col gap-6 px-6 pb-[100px] pt-5 md:mt-0 md:w-[576px] md:gap-10 md:py-[100px]">
+        <div className="mt-[60px] flex w-full flex-col gap-6 px-6 pb-[100px] pt-5 lg:mt-0 lg:w-[576px] lg:gap-10 lg:py-[100px]">
           <div className="flex flex-col items-center">
-            <span className="mb-4 text-xl font-bold leading-normal text-gray-900 md:text-4xl md:font-extrabold md:leading-10 md:tracking-tight">
+            <span className="mb-4 text-xl font-bold leading-normal text-gray-900 lg:text-4xl lg:font-extrabold lg:leading-10 lg:tracking-tight">
               서비스 문의하기
             </span>
-            <span className="text-center text-sm font-semibold text-gray-500 md:text-lg md:font-normal md:leading-6">
+            <span className="text-center text-sm font-semibold text-gray-500 lg:text-lg lg:font-normal lg:leading-6">
               담당자님의 고민을 빠르게 해결할 수 있도록
               <br />
               영업일 1일 이내 연락 드리겠습니다.
             </span>
           </div>
-          <div className="flex flex-col gap-3 md:gap-6">
+          <div className="flex flex-col gap-3 lg:gap-6">
             <div className="flex flex-col gap-1">
               <span className="text-sm font-medium leading-5 text-gray-700">건물명 *</span>
               <input
-                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm md:h-[50px] md:px-4 md:py-3"
+                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm lg:h-[50px] lg:px-4 lg:py-3"
                 onChange={(e) => setBuildingName(e.target.value)}
               />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm font-medium leading-5 text-gray-700">담당자명 *</span>
               <input
-                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
+                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm lg:h-[50px] lg:px-4 lg:py-3"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-sm font-medium leading-5 text-gray-700">휴대전화번호 *</span>
+              <span className="text-sm font-medium leading-5 text-gray-700">전화번호 *</span>
               <input
-                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
+                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm lg:h-[50px] lg:px-4 lg:py-3"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm font-medium leading-5 text-gray-700">담당자 이메일 *</span>
               <input
-                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm"
+                className="h-[42px] w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm lg:h-[50px] lg:px-4 lg:py-3"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-sm font-medium text-gray-700">개인정보 수집 동의 *</span>
-              <span className="flex items-center gap-3 p-2.5">
-                <input
-                  type="checkbox"
-                  className="size-4"
-                  checked={checked}
-                  onChange={() => setChecked((state) => !state)}
-                />
+              <span
+                className="flex w-fit cursor-pointer items-center gap-3 p-2.5"
+                onClick={() => setChecked((state) => !state)}
+              >
+                <input type="checkbox" className="size-4 cursor-pointer" checked={checked} />
                 <p className="text-sm font-medium text-gray-700">동의합니다.</p>
               </span>
             </div>
@@ -160,7 +158,7 @@ export default function InquiryPage() {
                 sendVoteMutateAsync({
                   text: `오피스너 홈페이지
 ${buildingName} 건물에서 도입 상담 요청을 하였습니다.
-담당자: ${name}s
+담당자: ${name}
 연락처: ${phoneNumber}
 이메일: ${email}`,
                 })

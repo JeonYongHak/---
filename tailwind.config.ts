@@ -12,8 +12,8 @@ const config: Config = {
       screens: {
         ow: '0px',
         sm: '0px',
-        md: '641px',
-        lg: '1548px',
+        md: '0px',
+        lg: '641px',
         xl: '1548px',
         '2xl': '1548px',
       },
@@ -26,7 +26,7 @@ const config: Config = {
       padding: {
         DEFAULT: '1rem',
         sm: '1rem',
-        md: '1.5rem',
+        md: '1rem',
         lg: '1.5rem',
         xl: '1.5rem',
         '2xl': '1.5rem',
@@ -35,7 +35,7 @@ const config: Config = {
         ow: '100%',
         sm: '100%',
         md: '100%',
-        lg: '1548px',
+        lg: '100%',
         xl: '1548px',
         '2xl': '1548px',
       },
