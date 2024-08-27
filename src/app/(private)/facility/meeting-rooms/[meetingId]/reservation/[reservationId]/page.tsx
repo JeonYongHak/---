@@ -1,7 +1,11 @@
 import * as SolarIconSet from 'solar-icon-set';
-import MeetingsAccessClientPage from './client-page';
 import { serverHttp } from '@/utils/http';
 import Icon from '@/types/solar-icon';
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
+import ControlTab from './_view/ControlTab';
+import PasswordTab from './_view/PasswordTab';
+import { twMerge } from 'tailwind-merge';
+import IconSax from '@/types/iconsax';
 
 type Props = {
   params: {
@@ -28,6 +32,30 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
   startAt.setHours(startAt.getHours() - 9);
   const endAt = new Date(data.endAt);
   endAt.setHours(endAt.getHours() - 9);
+
+  startAt.setMinutes(startAt.getMinutes() - 10);
+
+  const currentTime = new Date();
+  const isEarly = currentTime < startAt;
+  const isLate = currentTime > new Date(endAt);
+
+  const renderPanel = () => {
+    if (isEarly) return <div>회의실 예약 시간 10분 전부터 이용 가능합니다.</div>;
+    if (isLate) return <div>회의실 이용 시간이 지났습니다.</div>;
+    return (
+      <>
+        <TabPanel unmount={false} className="relative flex w-full flex-row items-center justify-center gap-8">
+          <ControlTab reservationId={reservationId} />
+        </TabPanel>
+        <TabPanel className={'flex flex-col items-center gap-6'}>
+          <PasswordTab reservationId={reservationId} />
+        </TabPanel>
+        <TabPanel unmount={false}>
+          <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+        </TabPanel>
+      </>
+    );
+  };
 
   return (
     <main className="mx-auto flex min-h-[calc(100vh-224px)] max-w-7xl flex-col justify-center bg-gray-100 px-4 sm:px-6 md:min-h-[calc(100vh-174px)] lg:px-8">
@@ -62,12 +90,44 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           {new Date(endAt).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 까지 출입 가능합니다.
         </span>
       </div>
-      <MeetingsAccessClientPage
-        reservationId={reservationId}
-        startAt={startAt}
-        endAt={endAt}
-        isCanceled={data.checkStatus === 'canceled'}
-      />
+      <TabGroup>
+        <TabList className="flex h-12 rounded-t-lg bg-gray-50">
+          <Tab
+            className={twMerge(
+              'flex flex-1 items-center justify-center gap-1 rounded-tl-lg border border-gray-200 transition-colors focus:outline-none',
+              'ui-selected:border-b-0 ui-selected:border-r-0 ui-selected:bg-white',
+            )}
+          >
+            <IconSax.Lock className="text-gray-400 ui-selected:text-blue-500" size={16} />
+            <span className="text-sm font-medium text-gray-400 ui-selected:text-blue-600">버튼제어</span>
+          </Tab>
+          <Tab
+            className={twMerge(
+              'flex flex-1 items-center justify-center gap-1 border border-gray-200 transition-colors focus:outline-none',
+              'ui-selected:border-b-0 ui-selected:border-r-0 ui-selected:bg-white',
+            )}
+          >
+            <IconSax.PasswordCheck className="text-gray-400 ui-selected:text-blue-500" size={16} />
+            <span className="text-sm font-medium text-gray-400 ui-selected:text-blue-600">비밀번호</span>
+          </Tab>
+          <Tab
+            className={twMerge(
+              'flex flex-1 items-center justify-center gap-1 rounded-tr-lg border border-gray-200 transition-colors focus:outline-none',
+              'ui-selected:border-b-0 ui-selected:border-l-0 ui-selected:bg-white',
+            )}
+          >
+            <IconSax.ExportSquare className="text-gray-400 ui-selected:text-blue-500" size={16} />
+            <span className="text-sm font-medium text-gray-400 ui-selected:text-blue-600">QR코드</span>
+          </Tab>
+        </TabList>
+        <TabPanels
+          className={
+            'flex h-[200px] items-center justify-center rounded-b-lg border-x border-b border-gray-200 bg-white'
+          }
+        >
+          {renderPanel()}
+        </TabPanels>
+      </TabGroup>
     </main>
   );
 }

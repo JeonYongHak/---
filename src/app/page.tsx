@@ -7,19 +7,6 @@ import Icon from '@/types/iconsax';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-const includedFeatures = [
-  'Private forum access',
-  'Member resources',
-  'Entry to annual conference',
-  'Official member t-shirt',
-];
-
-const navigation = [
-  { name: '소개', href: '#' },
-  { name: '가격', href: '#' },
-  { name: '문의하기', href: '#' },
-];
-
 export default function Home() {
   const router = useRouter();
 
@@ -642,7 +629,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="relative flex h-[440px] w-full items-center justify-center overflow-hidden lg:h-[360px]">
         <Image
           src="/images/buildings.png"
@@ -660,7 +646,6 @@ export default function Home() {
               전화문의 1833-9092
             </span>
           </div>
-
           <button
             className="flex w-[200px] items-center justify-center gap-1 rounded-[10px] bg-gray-800 p-[14px] font-medium leading-none text-white lg:p-[16px]"
             onClick={() => router.push('/inquiry')}
