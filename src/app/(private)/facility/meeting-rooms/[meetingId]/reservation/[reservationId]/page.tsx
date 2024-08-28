@@ -6,6 +6,7 @@ import ControlTab from './_view/ControlTab';
 import PasswordTab from './_view/PasswordTab';
 import { twMerge } from 'tailwind-merge';
 import IconSax from '@/types/iconsax';
+import { fetchMeetingRoomReservation } from '@/requests/meetingroom-reservations/fetchMeetingRoomReservation';
 
 type Props = {
   params: {
@@ -14,7 +15,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
+  const { data } = await fetchMeetingRoomReservation(reservationId);
   return {
     title: `오피스너 회의실 예약`,
     openGraph: {
@@ -25,8 +26,7 @@ export async function generateMetadata({ params: { reservationId } }: Props) {
 }
 
 export default async function MeetingsAccessPage({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
-
+  const { data } = await fetchMeetingRoomReservation(reservationId);
   // UTC 형태로 기록되어 내려오는 KST 시간을 다시 실제 UTC 시간으로 변경하는 작업
   const startAt = new Date(data.startAt);
   startAt.setHours(startAt.getHours() - 9);
@@ -45,10 +45,18 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
     return (
       <>
         <TabPanel unmount={false} className="relative flex w-full flex-row items-center justify-center gap-8">
-          <ControlTab reservationId={reservationId} />
+          {data.supportedControlTypes.includes('control') ? (
+            <ControlTab reservationId={reservationId} />
+          ) : (
+            <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+          )}
         </TabPanel>
         <TabPanel className={'flex flex-col items-center gap-6'}>
-          <PasswordTab reservationId={reservationId} />
+          {data.supportedControlTypes.includes('password') ? (
+            <PasswordTab reservationId={reservationId} />
+          ) : (
+            <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+          )}
         </TabPanel>
         <TabPanel unmount={false}>
           <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
