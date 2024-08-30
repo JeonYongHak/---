@@ -1,11 +1,11 @@
 import * as SolarIconSet from 'solar-icon-set';
-import { serverHttp } from '@/utils/http';
 import Icon from '@/types/solar-icon';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import ControlTab from './_view/ControlTab';
 import PasswordTab from './_view/PasswordTab';
 import { twMerge } from 'tailwind-merge';
 import IconSax from '@/types/iconsax';
+import { fetchMeetingRoomReservation } from '@/requests/meetingroom-reservations/fetchMeetingRoomReservation';
 
 type Props = {
   params: {
@@ -14,7 +14,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
+  const { data } = await fetchMeetingRoomReservation(reservationId);
   return {
     title: `오피스너 회의실 예약`,
     openGraph: {
@@ -25,8 +25,7 @@ export async function generateMetadata({ params: { reservationId } }: Props) {
 }
 
 export default async function MeetingsAccessPage({ params: { reservationId } }: Props) {
-  const { data } = await serverHttp(`/meetingroom-reservations/${reservationId}`);
-
+  const { data } = await fetchMeetingRoomReservation(reservationId);
   // UTC 형태로 기록되어 내려오는 KST 시간을 다시 실제 UTC 시간으로 변경하는 작업
   const startAt = new Date(data.startAt);
   startAt.setHours(startAt.getHours() - 9);
@@ -45,13 +44,30 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
     return (
       <>
         <TabPanel unmount={false} className="relative flex w-full flex-row items-center justify-center gap-8">
-          <ControlTab reservationId={reservationId} />
+          {data.supportedControlTypes.includes('control') ? (
+            <ControlTab reservationId={reservationId} />
+          ) : (
+            <p className="text-center font-medium leading-7 text-gray-700">
+              해당 회의실의 도어락은
+              <br /> 버튼제어 방식이 지원되지 않습니다.
+            </p>
+          )}
         </TabPanel>
         <TabPanel className={'flex flex-col items-center gap-6'}>
-          <PasswordTab reservationId={reservationId} />
+          {data.supportedControlTypes.includes('password') ? (
+            <PasswordTab reservationId={reservationId} />
+          ) : (
+            <p className="text-center font-medium leading-7 text-gray-700">
+              해당 회의실의 도어락은
+              <br /> 비밀번호 제공 방식이 지원되지 않습니다.
+            </p>
+          )}
         </TabPanel>
         <TabPanel unmount={false}>
-          <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+          <p className="text-center font-medium leading-7 text-gray-700">
+            해당 회의실의 도어락은
+            <br /> QR코드 방식이 지원되지 않습니다.
+          </p>
         </TabPanel>
       </>
     );
@@ -90,7 +106,7 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           {new Date(endAt).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 까지 출입 가능합니다.
         </span>
       </div>
-      <TabGroup>
+      <TabGroup defaultIndex={data.supportedControlTypes.includes('control') ? 0 : 1}>
         <TabList className="flex h-12 rounded-t-lg bg-gray-50">
           <Tab
             className={twMerge(

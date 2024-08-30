@@ -24,5 +24,5 @@ export const http = {
 };
 
 export function serverHttp<Response = unknown>(url: string, options?: RequestInit) {
-  return fetch(process.env.API_BASE_URL + url, options).then((res) => res.json());
+  return fetch(process.env.API_BASE_URL + url, options).then((res) => res.json() as Promise<BaseResponse<Response>>);
 }
