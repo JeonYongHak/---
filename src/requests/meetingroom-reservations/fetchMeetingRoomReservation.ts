@@ -10,7 +10,7 @@ type Response = {
   startAt: string;
   endAt: string;
   checkStatus: 'approved' | 'canceled';
-  supportedControlTypes: ['control' | 'password'];
+  supportedControlTypes: ('control' | 'password' | 'qr')[];
 };
 
 export const fetchMeetingRoomReservation = async (reservationId: string) => {

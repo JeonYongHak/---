@@ -1,5 +1,4 @@
 import * as SolarIconSet from 'solar-icon-set';
-import { serverHttp } from '@/utils/http';
 import Icon from '@/types/solar-icon';
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react';
 import ControlTab from './_view/ControlTab';
@@ -48,18 +47,27 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           {data.supportedControlTypes.includes('control') ? (
             <ControlTab reservationId={reservationId} />
           ) : (
-            <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+            <p className="text-center font-medium leading-7 text-gray-700">
+              해당 회의실의 도어락은
+              <br /> 버튼제어 방식이 지원되지 않습니다.
+            </p>
           )}
         </TabPanel>
         <TabPanel className={'flex flex-col items-center gap-6'}>
           {data.supportedControlTypes.includes('password') ? (
             <PasswordTab reservationId={reservationId} />
           ) : (
-            <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+            <p className="text-center font-medium leading-7 text-gray-700">
+              해당 회의실의 도어락은
+              <br /> 비밀번호 제공 방식이 지원되지 않습니다.
+            </p>
           )}
         </TabPanel>
         <TabPanel unmount={false}>
-          <p className="font-medium text-gray-900">해당 건물에서 지원되지 않습니다.</p>
+          <p className="text-center font-medium leading-7 text-gray-700">
+            해당 회의실의 도어락은
+            <br /> QR코드 방식이 지원되지 않습니다.
+          </p>
         </TabPanel>
       </>
     );
@@ -98,7 +106,7 @@ export default async function MeetingsAccessPage({ params: { reservationId } }: 
           {new Date(endAt).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 까지 출입 가능합니다.
         </span>
       </div>
-      <TabGroup>
+      <TabGroup defaultIndex={data.supportedControlTypes.includes('control') ? 0 : 1}>
         <TabList className="flex h-12 rounded-t-lg bg-gray-50">
           <Tab
             className={twMerge(
