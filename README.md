@@ -1,4 +1,8 @@
-
+기술스택 : 
+화면 ui :shadcn ui, tailwindCSS
+사용 언어: TypeScript
+사용 프레임워크 : Next.JS
+로그인 유효성 검증 기능 라이브러리 : React-hook-form
 ![화면 캡처 2024-09-18 214851](https://github.com/user-attachments/assets/1f0dcb99-c030-4548-94f7-b27321417991)
 ![화면 캡처 2024-09-18 204221](https://github.com/user-attachments/assets/67680f48-615c-468d-ac4c-6d15b549cc86)
 ![화면 캡처 2024-09-18 214950](https://github.com/user-attachments/assets/5070ea2d-6e51-4e58-b1f8-aa5ae770fc58)
