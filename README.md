@@ -15,8 +15,9 @@
 ![로그인 화면 모달 창 ui](https://github.com/user-attachments/assets/effad4eb-313c-4a68-8339-c7cd38715cc3)
 ![로그인 홈페이지 화면 ui](https://github.com/user-attachments/assets/05d622fe-fc5d-4dd7-b371-e36963f6173c)
 ![전체적인 파일 구조](https://github.com/user-attachments/assets/67680f48-615c-468d-ac4c-6d15b549cc86)
-https://github.com/user-attachments/assets/af0e092e-7f90-4089-a8e7-810ca4b3da58
-https://github.com/user-attachments/assets/f18cdd6d-ea0b-4812-b3ce-8a63b85f21e9
+
+동영상 : https://github.com/user-attachments/assets/af0e092e-7f90-4089-a8e7-810ca4b3da58
+        https://github.com/user-attachments/assets/f18cdd6d-ea0b-4812-b3ce-8a63b85f21e9
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Getting Started
