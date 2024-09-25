@@ -1,5 +1,12 @@
+개발 및 협업 방식 : Github, Slack, Linear, Notion
+![image](https://github.com/user-attachments/assets/8b7591e3-7d1f-45ea-9737-be0c293672d6)
+주차별 학습 회고 : 
+1 주차 - https://view964.tistory.com/81
+2 주차 - https://view964.tistory.com/83
+3 주차 - https://view964.tistory.com/84
+4 주차 - 
 기술스택 및 라이브러리 : 
-화면 ui :shadcn ui, tailwindCSS, lucide icons, react icons
+화면 ui : shadcn ui, tailwindCSS, lucide icons, react icons
 사용 언어: TypeScript
 사용 프레임워크 : Next.JS
 로그인 유효성 검증 기능 라이브러리 : React-hook-form
@@ -10,8 +17,8 @@
 ![로그인 홈페이지 화면 ui](https://github.com/user-attachments/assets/05d622fe-fc5d-4dd7-b371-e36963f6173c)
 https://github.com/user-attachments/assets/af0e092e-7f90-4089-a8e7-810ca4b3da58
 https://github.com/user-attachments/assets/f18cdd6d-ea0b-4812-b3ce-8a63b85f21e9
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ## Getting Started
 First, run the development server:
 
