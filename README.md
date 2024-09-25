@@ -1,4 +1,4 @@
-기술스택 : 
+기술스택 및 라이브러리 : 
 화면 ui :shadcn ui, tailwindCSS, lucide icons, react icons
 사용 언어: TypeScript
 사용 프레임워크 : Next.JS
