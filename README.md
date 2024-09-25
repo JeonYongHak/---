@@ -1,5 +1,5 @@
 기술스택 : 
-화면 ui :shadcn ui, tailwindCSS
+화면 ui :shadcn ui, tailwindCSS, lucide icons, react icons
 사용 언어: TypeScript
 사용 프레임워크 : Next.JS
 로그인 유효성 검증 기능 라이브러리 : React-hook-form
@@ -8,22 +8,11 @@
 ![화면 캡처 2024-09-18 214950](https://github.com/user-attachments/assets/5070ea2d-6e51-4e58-b1f8-aa5ae770fc58)
 ![화면 캡처 2024-09-18 205320](https://github.com/user-attachments/assets/effad4eb-313c-4a68-8339-c7cd38715cc3)
 ![로그인 홈페이지 화면 ui](https://github.com/user-attachments/assets/05d622fe-fc5d-4dd7-b371-e36963f6173c)
-
-
 https://github.com/user-attachments/assets/af0e092e-7f90-4089-a8e7-810ca4b3da58
-
-
-
 https://github.com/user-attachments/assets/f18cdd6d-ea0b-4812-b3ce-8a63b85f21e9
-
-
-
-
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -35,20 +24,14 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
-
 To learn more about Next.js, take a look at the following resources:
-
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
