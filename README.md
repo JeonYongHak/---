@@ -1,6 +1,4 @@
 개발 및 협업 방식 : Github, Slack, Linear, Notion
-
-
 ![image](https://github.com/user-attachments/assets/8b7591e3-7d1f-45ea-9737-be0c293672d6)
 주차별 학습 회고 : 
 1 주차 - https://view964.tistory.com/81
