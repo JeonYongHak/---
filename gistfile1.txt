@@ -1,0 +1,124 @@
+// src/app/[buildingId]/_view/MenuAll.tsx
+
+'use client';
+
+import Link from 'next/link';
+import {
+  IconAll,
+} from './IconMenu';
+import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
+import { ArrowLeft, CloseCircle, InfoCircle, SearchNormal1 } from 'iconsax-react';
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
+import MenuAllData from './MenuAllData';
+import { Button } from '@/components/ui/button';
+
+export default function MenuAll() {
+  const [inputFocus, setFocus] = useState(false);
+  const [search, setSearch] = useState('');
+  const [contents, setContents] = useState(MenuAllData);
+
+  useEffect(() => {
+    const filter = MenuAllData.filter((text) => {
+      return text.name.includes(search);
+    });
+    setContents(filter);
+
+    if (search === '') {
+      setContents(MenuAllData);
+    }
+  }, [search]);
+
+  return (
+    <div>
+      <AlertDialog>
+        <AlertDialogTrigger asChild>
+          <button className="flex h-24 w-24 flex-col items-center justify-center gap-1.5 rounded-lg text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-900">
+            {IconAll}
+            <p className="text-xs">전체 메뉴</p>
+          </button>
+        </AlertDialogTrigger>
+        <AlertDialogContent className=" flex min-h-[25rem] w-full max-w-[39.813rem] flex-col items-start gap-3 self-stretch px-7 pb-7 pt-5 shadow-[0_0_8px_0_rgba(75,85,99,0.25)] lg:rounded-2xl">
+          <AlertDialogHeader className="flex w-full flex-col">
+            <AlertDialogTitle>
+              <div
+                className={cn(
+                  `flex h-12 items-center gap-2 rounded-xl border p-3`,
+                  inputFocus ? 'shadow-[0px 0px 0px 2px rgba(37, 99, 235, 0.10)] border-blue-600' : 'border-gray-400 ',
+                )}
+              >
+                <SearchNormal1 size="20" color="#9ca3af" />
+                <input
+                  type="text"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="찾으시는 서비스가 있으신가요?"
+                  className="focus:shadow-[0px  0px 0px 2px rgba(37, 99, 235, 0.10)] flex w-full text-[1rem] font-medium leading-5 tracking-[0.02rem] text-gray-700 placeholder:text-gray-400 "
+                  onFocus={() => setFocus(true)}
+                  onBlur={() => setFocus(false)}
+                />
+                {search !== '' && (
+                  <CloseCircle size="20" color="#9ca3af" variant="Bold" onClick={() => setSearch('')} />
+                )}
+              </div>
+            </AlertDialogTitle>
+            <AlertDialogDescription
+              className={cn(
+                'grid min-h-[292px] grid-cols-4 gap-5 lg:grid-cols-5',
+                contents.length == 0 && 'grid-cols-1 lg:grid-cols-1',
+              )}
+            >
+              {contents.map((content) => (
+                <Link id={content.name} href={content.href}>
+                  <div className="flex h-[6.25rem] w-[6.25rem] flex-col items-center justify-center gap-1.5  text-center text-xs font-medium capitalize text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-900 active:[box-shadow:0px_0px_0px_2px_rgba(75,_85,_99,_0.10)]">
+                    {content.icon}
+                    <p className="text-xs">{content.name}</p>
+                  </div>
+                </Link>
+              ))}
+              {contents.length == 0 && (
+                <div className="flex flex-col items-center justify-center gap-4 self-stretch ">
+                  <div className="flex flex-col items-center justify-center gap-3 text-gray-500">
+                    <InfoCircle size="32" />
+                    <p className="text-[1.125rem] font-medium leading-[135%] ">일치하는 서비스가 없습니다.</p>
+                  </div>
+                  <Button
+                    className="flex items-center justify-center gap-2 rounded-lg bg-gray-100 p-2.5 text-gray-500"
+                    onClick={() => {
+                      setContents(MenuAllData);
+                      setSearch('');
+                    }}
+                  >
+                    <ArrowLeft size="16" />
+                    전체 서비스
+                  </Button>
+                </div>
+              )}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          {/* 닫기버튼 */}
+          <AlertDialogFooter className="absolute left-1/2 top-full mt-7 -translate-x-1/2">
+            <AlertDialogCancel className="!m-0 flex h-fit flex-col gap-2 !border-none !bg-transparent !p-0 text-white !shadow-none !outline-none">
+              <CloseCircle
+                size="60"
+                variant="Bold"
+                className="drop-shadow-[0_0_8px_rgba(78,85,99,0.25)]"
+                onClick={() => setSearch('')}
+              />
+              <p className="font-base">닫기</p>
+            </AlertDialogCancel>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </div>
+  );
+}

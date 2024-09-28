@@ -1,0 +1,464 @@
+// src/server/db8.json
+
+{
+  "buildingInfo": [
+    {
+      "id": "1",
+      "buildingId": "b1",
+      "buildingKor": "오피스너타워1",
+      "buildingEng": "OP TOWER",
+      "description": "최첨단 시설을 갖춘 25층 규모의 고층 오피스타워를 필두로 고품격 입주사 서비스를 자랑합니다. 오피스너타워는 서울 도심에 생생한 활력을 불어넣으며, 비즈니스와 라이프스타일의 새로운 지평을 여는 랜드마크로 자리 잡을 것입니다.",
+      "employeeContactList": [
+        {
+          "name": "관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        },
+        {
+          "name": "운영지원팀",
+          "phone_number": "010-1234-5678",
+          "description": "8:00- 18:00시까지 운영됩니다."
+        },
+        {
+          "name": "주차관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        }
+      ],
+      "employeeContactmessage": "오피스너타워 관리센터는 A동 지하 1층에 위치하고 있으며, 8:00 - 18:00까지 운영됩니다. 빠른 연결을 원하시면 1234-1234로 연락주시며, 각 부서 연결을 원하신다면 담당 관리팀 연락처 확인하시어 전화주시길 바랍니다.",
+      "buildingImg": [
+        "https://images.unsplash.com/photo-1719937051124-91c677bc58fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1414438992182-69e404046f80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJ1aWxkaW5nfGVufDB8fDB8fHww"
+      ],
+      "address": "서울시 구로구 디지털로 300",
+      "coordinates": ["127.21123", "37.1231"]
+    },
+    {
+      "id": "2",
+      "buildingId": "b2/buildingInfo",
+      "buildingKor": "오피스너타워2",
+      "buildingEng": "OP TOWER",
+      "description": "최첨단 시설을 갖춘 25층 규모의 고층 오피스타워를 필두로 고품격 입주사 서비스를 자랑합니다.오피스너타워는 서울 도심에 생생한 활력을 불어넣으며, 비즈니스와 라이프스타일의 새로운 지평을 여는 랜드마크로 자리 잡을 것입니다.",
+      "employeeContactList": [
+        {
+          "name": "관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        },
+        {
+          "name": "운영지원팀",
+          "phone_number": "010-1234-5678",
+          "description": "8:00- 18:00시까지 운영됩니다."
+        },
+        {
+          "name": "주차관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        }
+      ],
+      "employeeContactmessage": "오피스너타워 관리센터는 A동 지하 1층에 위치하고 있으며, 8:00 - 18:00까지 운영됩니다. 빠른 연결을 원하시면 1234-1234로 연락주시며, 각 부서 연결을 원하신다면 담당 관리팀 연락처 확인하시어 전화주시길 바랍니다.",
+      "buildingImg": [
+        "https://images.unsplash.com/photo-1719937051124-91c677bc58fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1414438992182-69e404046f80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJ1aWxkaW5nfGVufDB8fDB8fHww"
+      ],
+      "address": "서울시 구로구 디지털로 300",
+      "coordinates": ["127.21123", "37.1231"]
+    },
+    {
+      "id": "3",
+      "buildingId": "b3/buildingInfo",
+      "buildingKor": "오피스너타워3",
+      "buildingEng": "OP TOWER",
+      "description": "최첨단 시설을 갖춘 25층 규모의 고층 오피스타워를 필두로 고품격 입주사 서비스를 자랑합니다.오피스너타워는 서울 도심에 생생한 활력을 불어넣으며, 비즈니스와 라이프스타일의 새로운 지평을 여는 랜드마크로 자리 잡을 것입니다.",
+      "employeeContactList": [
+        {
+          "name": "관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        },
+        {
+          "name": "운영지원팀",
+          "phone_number": "010-1234-5678",
+          "description": "8:00- 18:00시까지 운영됩니다."
+        },
+        {
+          "name": "주차관리팀",
+          "phone_number": "010-1234-5678",
+          "description": "24시간 운영중이니 언제든지 연락주세요."
+        }
+      ],
+      "employeeContactmessage": "오피스너타워 관리센터는 A동 지하 1층에 위치하고 있으며, 8:00 - 18:00까지 운영됩니다. 빠른 연결을 원하시면 1234-1234로 연락주시며, 각 부서 연결을 원하신다면 담당 관리팀 연락처 확인하시어 전화주시길 바랍니다.",
+      "buildingImg": [
+        "https://images.unsplash.com/photo-1719937051124-91c677bc58fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1414438992182-69e404046f80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJ1aWxkaW5nfGVufDB8fDB8fHww",
+        "https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGJ1aWxkaW5nfGVufDB8fDB8fHww"
+      ],
+      "address": "서울시 구로구 디지털로 300",
+      "coordinates": ["127.21123", "37.1231"]
+    }
+  ],
+  "notice": [
+    {
+      "id": 0,
+      "buildingId": "b1",
+      "title": "분리수거일 변경 안내드립니다",
+      "date": "24.07.07"
+    },
+    {
+      "id": 1,
+      "buildingId": "b1",
+      "title": "필라테스 수업일 변경 안내드립니다",
+      "date": "24.08.09"
+    },
+    {
+      "id": 2,
+      "buildingId": "b1",
+      "title": "UI개발 완료 변경 안내드립니다",
+      "date": "24.09.06"
+    },
+    {
+      "id": 2,
+      "buildingId": "b2",
+      "title": "UI개발 완료 변경 안내드립니다",
+      "date": "24.09.06"
+    },
+    {
+      "id": 2,
+      "buildingId": "b3",
+      "title": "UI개발 완료 변경 안내드립니다",
+      "date": "24.09.06"
+    }
+  ],
+  "boardNews": [
+    {
+      "id": 0,
+      "buildingId": "b1",
+      "title": "쓰레기분리수거안내추석연휴에는모두중지됩니다.미리안내드립니다",
+      "date": "24.09.12"
+    },
+    {
+      "id": 1,
+      "buildingId": "b1",
+      "title": "소식전달해요1",
+      "date": "24.09.11"
+    },
+    {
+      "id": 2,
+      "buildingId": "b1",
+      "title": "소식전달해요2",
+      "date": "24.07.05"
+    },
+    {
+      "id": 3,
+      "buildingId": "b1",
+      "title": "소식전달해요3",
+      "date": "24.07.05"
+    },
+    {
+      "id": 4,
+      "buildingId": "b1",
+      "title": "소식전달해요4",
+      "date": "24.07.05"
+    },
+    {
+      "id": 5,
+      "buildingId": "b1",
+      "title": "엘리베이터 점검 안내5",
+      "date": "24.07.05"
+    },
+    {
+      "id": 6,
+      "buildingId": "b1",
+      "title": "정기 소방훈련 일정6",
+      "date": "24.07.03"
+    }
+  ],
+  "boardFolders": [
+    {
+      "id": 0,
+      "buildingId": "b1",
+      "title": "자료자료",
+      "date": "24.09.12"
+    },
+    {
+      "id": 1,
+      "buildingId": "b1",
+      "title": "소식전달해요1",
+      "date": "24.09.11"
+    },
+    {
+      "id": 2,
+      "buildingId": "b1",
+      "title": "소식전달해요2",
+      "date": "24.07.05"
+    },
+    {
+      "id": 3,
+      "buildingId": "b1",
+      "title": "소식전달해요3",
+      "date": "24.07.05"
+    },
+    {
+      "id": 4,
+      "buildingId": "b1",
+      "title": "소식전달해요4",
+      "date": "24.07.05"
+    },
+    {
+      "id": 5,
+      "buildingId": "b1",
+      "title": "엘리베이터 점검 안내5",
+      "date": "24.07.05"
+    },
+    {
+      "id": 6,
+      "buildingId": "b1",
+      "title": "정기 소방훈련 일정6",
+      "date": "24.07.03"
+    }
+  ],
+  "boardMeal": [
+    {
+      "id": 0,
+      "buildingId": "b1",
+      "title": "1주차 밥밥밥",
+      "date": "24.09.12"
+    },
+    {
+      "id": 1,
+      "buildingId": "b1",
+      "title": "소식전달해요1",
+      "date": "24.09.11"
+    },
+    {
+      "id": 2,
+      "buildingId": "b1",
+      "title": "소식전달해요2",
+      "date": "24.07.05"
+    },
+    {
+      "id": 3,
+      "buildingId": "b1",
+      "title": "소식전달해요3",
+      "date": "24.07.05"
+    },
+    {
+      "id": 4,
+      "buildingId": "b1",
+      "title": "소식전달해요4",
+      "date": "24.07.05"
+    },
+    {
+      "id": 5,
+      "buildingId": "b1",
+      "title": "엘리베이터 점검 안내5",
+      "date": "24.07.05"
+    },
+    {
+      "id": 6,
+      "buildingId": "b1",
+      "title": "정기 소방훈련 일정6",
+      "date": "24.07.03"
+    }
+  ],
+  "boardCommunity": [],
+  "meals": [
+    {
+      "id": "1",
+      "title": "8월 2주차 식단표",
+      "dateRange": {
+        "start": "2024-08-13",
+        "end": "2024-08-17"
+      },
+      "description": "8월 2주차도 맛있게 드세요!",
+      "images": [
+        "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "8월 1주차 식단표",
+      "dateRange": {
+        "start": "2024-08-06",
+        "end": "2024-08-10"
+      },
+      "description": "8월 1주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "3",
+      "title": "7월 5주차 식단표",
+      "dateRange": {
+        "start": "2024-07-30",
+        "end": "2024-08-03"
+      },
+      "description": "7월 5주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "4",
+      "title": "7월 4주차 식단표",
+      "dateRange": {
+        "start": "2024-07-23",
+        "end": "2024-07-27"
+      },
+      "description": "7월 4주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "5",
+      "title": "7월 3주차 식단표",
+      "dateRange": {
+        "start": "2024-07-16",
+        "end": "2024-07-20"
+      },
+      "description": "7월 3주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "6",
+      "title": "7월 2주차 식단표",
+      "dateRange": {
+        "start": "2024-07-09",
+        "end": "2024-07-13"
+      },
+      "description": "7월 2주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "7",
+      "title": "7월 1주차 식단표",
+      "dateRange": {
+        "start": "2024-07-02",
+        "end": "2024-07-06"
+      },
+      "description": "7월 1주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "8",
+      "title": "6월 5주차 식단표",
+      "dateRange": {
+        "start": "2024-06-25",
+        "end": "2024-06-29"
+      },
+      "description": "6월 5주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "9",
+      "title": "6월 4주차 식단표",
+      "dateRange": {
+        "start": "2024-06-18",
+        "end": "2024-06-22"
+      },
+      "description": "6월 4주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "10",
+      "title": "6월 3주차 식단표",
+      "dateRange": {
+        "start": "2024-06-11",
+        "end": "2024-06-15"
+      },
+      "description": "6월 3주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "11",
+      "title": "6월 2주차 식단표",
+      "dateRange": {
+        "start": "2024-06-04",
+        "end": "2024-06-08"
+      },
+      "description": "6월 2주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "12",
+      "title": "6월 1주차 식단표",
+      "dateRange": {
+        "start": "2024-05-28",
+        "end": "2024-06-01"
+      },
+      "description": "6월 1주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "13",
+      "title": "5월 4주차 식단표",
+      "dateRange": {
+        "start": "2024-05-21",
+        "end": "2024-05-25"
+      },
+      "description": "5월 4주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "14",
+      "title": "5월 3주차 식단표",
+      "dateRange": {
+        "start": "2024-05-14",
+        "end": "2024-05-18"
+      },
+      "description": "5월 3주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "15",
+      "title": "5월 2주차 식단표",
+      "dateRange": {
+        "start": "2024-05-07",
+        "end": "2024-05-11"
+      },
+      "description": "5월 2주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "16",
+      "title": "5월 1주차 식단표",
+      "dateRange": {
+        "start": "2024-04-30",
+        "end": "2024-05-04"
+      },
+      "description": "5월 1주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "17",
+      "title": "4월 5주차 식단표",
+      "dateRange": {
+        "start": "2024-04-23",
+        "end": "2024-04-27"
+      },
+      "description": "4월 5주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "18",
+      "title": "4월 4주차 식단표",
+      "dateRange": {
+        "start": "2024-04-16",
+        "end": "2024-04-20"
+      },
+      "description": "4월 4주차도 맛있게 드세요!",
+      "images": []
+    },
+    {
+      "id": "19",
+      "title": "4월 3주차 식단표",
+      "dateRange": {
+        "start": "2024-04-09",
+        "end": "2024-04-13"
+      },
+      "description": "4월 3주차도 맛있게 드세요!",
+      "images": []
+    }
+  ]
+}
