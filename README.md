@@ -1,10 +1,12 @@
 개발 및 협업 방식 : Github, Slack, Linear, Notion
+
+
 ![image](https://github.com/user-attachments/assets/8b7591e3-7d1f-45ea-9737-be0c293672d6)
 주차별 학습 회고 : 
-1 주차 - https://view964.tistory.com/81 \n
-2 주차 - https://view964.tistory.com/83 \n
-3 주차 - https://view964.tistory.com/84 \n
-4 주차 - https://view964.tistory.com/88 \n
+1 주차 - https://view964.tistory.com/81
+2 주차 - https://view964.tistory.com/83
+3 주차 - https://view964.tistory.com/84
+4 주차 - https://view964.tistory.com/88
 기술스택 및 라이브러리 : 
 화면 ui : shadcn ui, tailwindCSS, lucide icons, react icons
 사용 언어: TypeScript
